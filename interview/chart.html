@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- <link rel="stylesheet" href="chart.css"> -->
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+    font-family: serif;
+}
+
+.navbar{
+    width: 100%;
+    background-color: rgb(38, 38, 207);
+    align-content: space-between;
+    color: white;
+}
+.navbar ul{
+   
+    display: flex;
+   
+}
+.navbar ul li{
+   
+    padding: 5px 20px;
+     list-style-type: none;
+  
+
+
+}
+
+.navbar ul li a{
+    color: white;
+    text-decoration: none;
+}
+.navbar ul li a:hover{
+    color:orange;
+}
+/* 
+#input{
+    margin-top: 40px;
+    border-radius: 10px;
+    border: 2px solid  rgb(38, 38, 207);
+} */
+
+
+    
+@media screen  and (max-width:700px) {
+    
+    .navbar{
+        display: block;
+        text-align: center;
+    }
+    .navbar  ul{
+        display: block;
+    }
+
+    .logo{
+        text-align: center;
+    }
+
+}
+
+
+@media screen  and (max-width:500px) {
+    
+    .navbar{
+        display: block;
+        text-align: center;
+    }
+    .navbar  ul{
+        display: block;
+    }
+
+    .logo{
+        text-align: center;
+    }
+
+}
+
+
+
+#cd{
+    border-radius: 15px;
+}
+#heart{
+    background-color: rgb(226, 225, 222);
+    float: right;
+    color: red;
+    border: 1px solid rgb(227, 224, 224);
+    padding: 6px;
+    border-radius: 25px;
+}
+
+#heart:hover{
+    /* color: orange; */
+    background-color:orange;
+}
+
+
+.ho:hover{
+    text-shadow: none !important;
+    box-sizing: border-box !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+    transform: scale(1.1)  !important;
+    -webkit-transform: scale(1.1)  !important;
+    z-index: 2;
+}
+
+#footer{
+    background-color: rgb(220, 202, 234);
+}
+
+#quality{
+         border: 1px solid gray;
+        border-radius: 20px;
+        background-color: gray;
+        padding: 2px 5px;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-bottom: 100px;
+}
+
+#sn{
+    margin-bottom: 105px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+    </style>
+
+
+</head>
+<body>
+    <header>
+
+        <div class="navbar" data-aos="zoom-in-down">
+            <div class="logo">CyberGuerd KeyHub</div>
+            <ul>
+              <li>  <input type="search" value="     search" id="input"></li>
+                <!-- <li><p></p><br>My Acount</li> -->
+                <li>  <a href="#"><i class="fas fa-user"></i> My Account</a></li>
+                <li><a href="#"><i class="fas fa-heart"></i> Wishlist</a></li>
+              <li> <a href="#"><i class="fas fa-shopping-cart"></i> Cart</a></li>
+                <!-- <li><p></p><br>Wishlist</li>
+                <li><p></p><br><a href="">Chart</a></li> -->
+            </ul>
+        </div>
+
+    </header>
+
+
+
+    <main>
+
+        <div id="forlike">
+
+            <p data-aos="zoom-in-right" style="padding-top: 60px; padding-left: 60px;"><span style="color: orange; ">Cart</span>  < Information < Payment</p>
+            
+            <h1 data-aos="zoom-in-up" style="text-align: center; color: rgb(38, 38, 207) ;"><b>Chart</b></h1>
+
+            <div class="container my-5">
+                <div class="row">
+                    <div class="col-md-7" data-aos="zoom-in-right">
+                        <table>
+                            <thead>
+                                <th><p><b>Product</b></p><hr></th> 
+                                <th><p><b>Price</b></p><hr></th>
+                                <th><p><b>Quantity</b></p><hr></th>
+                                <th><p><b>Subtotal</b></p><hr></th>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <!-- <div class="card"> -->
+                                            <img src="https://qnepcrepair.com/wp-content/uploads/2017/01/avira_antivirus-1yr-500x500.jpg" alt="" style="height: 15vh;">
+                                           
+                                        <!-- </div> -->
+                                        <p>Avera Antivirus pro</p>
+                                        <hr>
+                                    </td>
+                                    <td> <p id="sn">$349.00</p> <hr></td>
+                                    <td>
+                                        <p id="quality"><i class="fa-solid fa-circle-plus"></i> <b>1</b> <i class="fa-solid fa-circle-minus"></i></p>
+                                     <hr>
+                                    </td>
+                                    <td> <p id="sn"><b >$349.00</b></p> <hr></td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>
+                                        <!-- <div class="card"> -->
+                                            <img src="https://www.madrasshoppe.com/195248-large_default/the-antivirus-hackers-handbook-misl-wiley-joxean-koret-elias-bachaalany.jpg" alt="" style="height: 15vh;">
+                                           
+                                        <!-- </div> -->
+                                        <p>Quick Heal Antivirus pro</p>
+                                        <hr>
+                                    </td>
+                                    <td>
+                                        <p id="sn">$349.00</p><hr>
+                                    </td>
+                                    <td>
+                                        <p id="quality"><i class="fa-solid fa-circle-plus"></i> <b>1</b> <i class="fa-solid fa-circle-minus"></i></p>
+                                   
+                                        <hr>
+                                    </td>
+                                    <td><p id="sn"><b >$349.00</b></p><hr></td>
+                                </tr>
+        
+        
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="col-md-5" data-aos="zoom-in-left">
+
+                        <div class="card p-5">
+                            <p><b>Price Details <span style="color: red; text-align: center;"> (2 items)</span></b></p>
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <p><b>Subtotal</b></p>
+                                    <br>
+                                    <p><b>GST</b></p>
+                                    <hr>
+                                    <p><b>Total</b></p>
+                                </div>
+                                <div class="col-md-6">
+                                    <p>$668.00</p>
+                                    <br>
+                                    <p>$125.00</p>
+                                    <hr>
+                                    <p><b>$823.00</b></p>
+                                </div>
+                                <button class="btn btn-primary">Proceed to checkout</button>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+               
+            </div>
+
+
+
+            <div class="container">
+
+                <h4><b>You may also like</b></h4>
+
+            <div class="row my-4">
+                <div class="col-md-3" data-aos="zoom-in-up" >
+                    <div class="card shadow-lg ho" id="cd">
+                        <img src="https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full//82/MTA-5631112/avast_antivirus_avast_premier_-_license_key_-_termurah_full02_fr6n71bb.jpg" alt="" style="border-radius: 15px;" >
+                       <!-- <div class="card-img-overlay">
+                      <a href="">  <i class="fa-regular fa-heart" id="heart"></i></a>
+                       </div> -->
+                        <div class="card-body">
+                            <p><b>Awast Antivirus</b></p>
+                            <p><b>$349 <span style="font-size: 10px; color: red;">$400</span></b> <a href="chart.html" class="btn btn-primary" style="margin-left: 40px; cursor: pointer;">Add to chart</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3" data-aos="zoom-in-up">
+                    <div class="card shadow-lg ho" id="cd">
+                        <img src="https://qnepcrepair.com/wp-content/uploads/2017/01/avira_antivirus-1yr-500x500.jpg" alt="" style="border-radius: 15px;" >
+                       <!-- <div class="card-img-overlay">
+                      <a href="">  <i class="fa-regular fa-heart" id="heart"></i></a>
+                       </div> -->
+                        <div class="card-body">
+                            <p><b>Avera Antivirus pro</b></p>
+                            <p><b>$349 <span style="font-size: 10px; color: red;">$400</span></b> <a href="chart.html" class="btn btn-primary" style="margin-left: 40px; cursor: pointer;">Add to chart</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3" data-aos="zoom-in-up">
+                    <div class="card shadow-lg ho" id="cd">
+                        <img src="https://www-konga-com-res.cloudinary.com/w_400,f_auto,fl_lossy,dpr_3.0,q_auto/media/catalog/product/X/Z/81045_1518275872.jpg" alt="" style="border-radius: 15px;" >
+                       <!-- <div class="card-img-overlay">
+                      <a href="">  <i class="fa-regular fa-heart" id="heart"></i></a>
+                       </div> -->
+                        <div class="card-body">
+                            <p><b>Norton Antivirus  </b></p>
+                            <p><b>$349 <span style="font-size: 10px; color: red;">$400</span></b> <a href="chart.html" class="btn btn-primary" style="margin-left: 40px; cursor: pointer;">Add to chart</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3" data-aos="zoom-in-up">
+                    <div class="card shadow-lg ho" id="cd">
+                        <img src="https://www.madrasshoppe.com/195248-large_default/the-antivirus-hackers-handbook-misl-wiley-joxean-koret-elias-bachaalany.jpg" alt="" style="border-radius: 15px;" >
+                       <!-- <div class="card-img-overlay">
+                      <a href="">  <i class="fa-regular fa-heart" id="heart"></i></a>
+                       </div> -->
+                        <div class="card-body">
+                            <p><b>Quick Heal Antivirus pro</b></p>
+                            <p><b>$349 <span style="font-size: 10px; color: red;">$400</span></b> <a href="chart.html" class="btn btn-primary" style="margin-left: 40px; cursor: pointer;">Add to chart</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            </div>
+
+        </div>
+  
+    </main>
+    <footer>
+
+        <div id="footer" data-aos="zoom-in-up">
+
+            <div class="container my-5">
+                <div class="row">
+                    <div class="col-md-3">
+                        <p style="font-size: 18px; color: rgb(38, 38, 207);"><b>CyberGuerd KeyHub</b></p>
+                        <p>Title discription about the website little 
+                        description about the website little description
+                        about the website little description about the 
+                        website little description about the website.
+                    </p>
+                    </div>
+                    <div class="col-md-3">
+                        <p style="font-size: 18px; color: rgb(38, 38, 207);"><b>Policy</b></p>
+                        <p>Privacy Policy</p>
+                        <p>Terms of use</p>
+                        <p>Return & shipping</p>
+                        <p>cancellation policy</p>
+                    </div>
+                    <div class="col-md-3">
+                        <p style="font-size: 18px; color: rgb(38, 38, 207);"><b>Support</b></p>
+                        <p>FAQs</p>
+                        <p>About Us</p>
+                        <p>Other</p>
+
+                    </div>
+                    <div class="col-md-3">
+                        <p style="font-size: 18px; color: rgb(38, 38, 207);"><b>Contact</b></p>
+                        <p> <i class="fa-solid fa-phone"></i> +12356789</p>
+                        <p> <i class="fa-solid fa-envelope"></i> support@cyberuardkeyhub.in</p>
+                    </div>
+                </div>
+                <p class="text-center py-5">copyright@2023 CyberGuerd KeyHub. All rights reserved </p>
+            </div>
+
+        </div>
+
+    </footer>
+
+    <script>
+        AOS.init({
+           duration:1500,
+        });
+      </script>
+
+</body>
+</html>
